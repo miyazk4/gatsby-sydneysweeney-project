@@ -1,0 +1,28 @@
+@media (max-width: 600px) {
+  .hamburgerMenu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+    .bar1,
+    .bar2,
+    .bar3 {
+      background-color: #ccc;
+      width: 30px;
+      height: 5px;
+      margin: 2px 0;
+      border-radius: 5px;
+    }
+    &.change .bar1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    &.change .bar2 {
+      opacity: 0;
+    }
+
+    &.change .bar3 {
+      transform: rotate(45deg) translate(-7px, -8px);
+    }
+  }
+}
