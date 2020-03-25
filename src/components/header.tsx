@@ -1,40 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
+import headerStyles from "./header.module.scss"
+import Hamburger from "./hamburger"
+
 const Header = () => {
   return (
-    <header>
+    <header className={headerStyles.header}>
       <h1>
-        <Link to="/">Home</Link>
+        <Link to="/" className={headerStyles.logo}>
+          Home
+        </Link>
       </h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/" onClick={e => e.preventDefault()}>
-              About
-            </Link>
-            <ul>
-              <li>
-                <Link to="/about/sydneysweeney">Sydney Sweeney</Link>
-              </li>
-              <li>
-                <Link to="/about/contacts">Contacts</Link>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Link to="/news">News</Link>
-          </li>
-          <li>
-            <Link to="/works">Works</Link>
-          </li>
-          <li>
-            <Link to="/gallery">Gallery</Link>
-          </li>
-          <li>
-            <Link to="/register">Register</Link>
-          </li>
-        </ul>
-      </nav>
+      <div>
+        <Hamburger />
+      </div>
     </header>
   )
 }
