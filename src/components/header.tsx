@@ -18,7 +18,22 @@ const Header = () => {
               <li>
                 <Link to="/about/sydneysweeney">Sydney Sweeney</Link>
               </li>
+              <li>
+                <Link to="/about/contacts">Contacts</Link>
+              </li>
             </ul>
+          </li>
+          <li>
+            <Link to="/news">News</Link>
+          </li>
+          <li>
+            <Link to="/works">Works</Link>
+          </li>
+          <li>
+            <Link to="/gallery">Gallery</Link>
+          </li>
+          <li>
+            <Link to="/register">Register</Link>
           </li>
         </ul>
       </nav>
