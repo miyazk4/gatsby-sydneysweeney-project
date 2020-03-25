@@ -11,7 +11,14 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/" onClick={e => e.preventDefault()}>
+              About
+            </Link>
+            <ul>
+              <li>
+                <Link to="/about/sydneysweeney">Sydney Sweeney</Link>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
