@@ -2,31 +2,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: linear-gradient(to left, #536976, #292e49);
+  padding: 0.5rem 1rem;
 
-  .logo {
-    font-size: 1.3rem;
+  a {
+    text-decoration: none;
+    color: #ccc;
   }
-
-  .nav-list {
-    display: flex;
-
-    .secondary-nav-main {
-      .secondary-nav-item {
-        display: none;
-      }
-      &:hover {
-        .secondary-nav-item {
-          display: block;
+  .navigation-container {
+    .nav-list {
+      display: flex;
+      .secondary-nav-list-container {
+        .nav-item {
+          position: relative;
+        }
+        .secondary-nav-item-ul {
+          display: none;
+          position: absolute;
+          top: 63px;
+          .nav-item {
+            display: block;
+            background: linear-gradient(to left, #536976, #292e49);
+            border-bottom: 2px solid #536976;
+          }
+        }
+        &:hover {
+          .secondary-nav-item-ul {
+            display: block;
+          }
         }
       }
     }
-    .nav-item {
-      color: #999;
-      margin-right: 1.3rem;
-      font-size: 0.9rem;
-      text-decoration: none;
-      background-color: red;
 
+    .nav-item {
       &:hover {
         text-decoration: underline;
         color: #ddd;
@@ -36,15 +44,70 @@
 }
 
 @media (max-width: 600px) {
-  .navigation-container:not(.navigation-modal-open) {
-    display: none;
+  .header {
+    .navigation-container:not(.navigation-modal-open) {
+      display: none;
+    }
+
+    .navigation-container.navigation-modal-open {
+      position: fixed;
+      left: 45%;
+      top: 64px;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, #bbd2c5, #536976, #292e49);
+
+      .nav-list {
+        display: block;
+        padding: 20px;
+
+        .nav-item {
+          font-size: 1.5rem;
+          margin-bottom: 20px;
+          display: block;
+          border-bottom: 1px solid #ddd;
+        }
+
+        .secondary-nav-list-container {
+          .secondary-nav-item-ul {
+            list-style-type: none;
+            margin-left: 25px;
+          }
+        }
+      }
+    }
   }
-  .navigation-container.navigation-modal-open {
-    position: fixed;
-    left: 50%;
-    top: 48px;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 601px) and (max-width: 999px) {
+  .header {
+    .logo {
+      font-size: 1.6rem;
+    }
+
+    .navigation-container {
+      .nav-list {
+        .nav-item {
+          font-size: 1.2rem;
+          padding: 7px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    .logo {
+      font-size: 1.9rem;
+    }
+
+    .navigation-container {
+      .nav-item {
+        font-size: 1.5rem;
+        padding: 12px;
+        margin-right: 8px;
+      }
+    }
   }
 }

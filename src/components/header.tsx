@@ -8,7 +8,7 @@ const Header = () => {
     <header className={headerStyles.header}>
       <h1>
         <Link to="/" className={headerStyles.logo}>
-          Home
+          Sydney Sweeney
         </Link>
       </h1>
       <div>

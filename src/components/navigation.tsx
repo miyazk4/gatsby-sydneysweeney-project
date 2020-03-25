@@ -15,7 +15,7 @@ const Navigation = ({ open }: NavigationProps) => {
       })}
     >
       <ul className={headerStyles.navList}>
-        <li className={headerStyles.secondaryNavMain}>
+        <li className={headerStyles.secondaryNavListContainer}>
           <Link
             to="/"
             className={headerStyles.navItem}
@@ -23,7 +23,7 @@ const Navigation = ({ open }: NavigationProps) => {
           >
             About
           </Link>
-          <ul className={headerStyles.secondaryNavItem}>
+          <ul className={headerStyles.secondaryNavItemUl}>
             <li>
               <Link to="/about/sydneysweeney" className={headerStyles.navItem}>
                 Sydney Sweeney
