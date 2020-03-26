@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 export const query = graphql`
   query($slug: String!) {
@@ -8,6 +9,13 @@ export const query = graphql`
       frontmatter {
         title
         date
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       html
     }
@@ -19,6 +27,12 @@ const News = props => {
     <Layout>
       <h1>{props.data.markdownRemark.frontmatter.title}</h1>
       <p>{props.data.markdownRemark.frontmatter.date}</p>
+      <Img
+        fluid={
+          props.data.markdownRemark.frontmatter.featuredImage.childImageSharp
+            .fluid
+        }
+      />
       <div
         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
       ></div>
