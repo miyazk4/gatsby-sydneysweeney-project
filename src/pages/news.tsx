@@ -4,7 +4,7 @@ import newsStyles from "./news.module.scss"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
-const News = () => {
+const NewsPage = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark {
@@ -14,6 +14,9 @@ const News = () => {
               title
               date
               briefDescription
+            }
+            fields {
+              slug
             }
           }
         }
@@ -26,18 +29,17 @@ const News = () => {
       <h1 className={newsStyles.title}>News</h1>
       <div>
         {data.allMarkdownRemark.edges.map(edges => (
-          <div key={edges.node.frontmatter.title}>
-            <h1>{edges.node.frontmatter.title}</h1>
-            <span>{edges.node.frontmatter.date}</span>
-            <p>{edges.node.frontmatter.briefDescription}</p>
-            <div>
-              <Link to="/">View detail</Link>
+          <Link to={`news/${edges.node.fields.slug}`}>
+            <div key={edges.node.frontmatter.title}>
+              <h1>{edges.node.frontmatter.title}</h1>
+              <span>{edges.node.frontmatter.date}</span>
+              <p>{edges.node.frontmatter.briefDescription}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </Layout>
   )
 }
 
-export default News
+export default NewsPage
