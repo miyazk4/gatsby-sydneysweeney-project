@@ -4,7 +4,7 @@ import newsStyles from "./news.module.scss"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
-const News = () => {
+const NewsPage = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark {
@@ -40,4 +40,4 @@ const News = () => {
   )
 }
 
-export default News
+export default NewsPage
