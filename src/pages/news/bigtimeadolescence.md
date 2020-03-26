@@ -2,6 +2,7 @@
 title: "Big Time Adolescence: a new type of 'coming of age'"
 date: "2020-03-24"
 briefDescription: "Sydney Sweeney gives a sensitive and subtil performance on her newest work"
+featuredImage: "../../images/big-time.jpg"
 ---
 
 Big Time Adolescence, directed by Jason Orley, presents a new type of coming of age movies. It's a realistic and empathetic narrative about the meaning of becoming an adult and leaving things behind.
