@@ -10,6 +10,7 @@ export const query = graphql`
       frontmatter {
         title
         year
+        seasons
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {
@@ -33,8 +34,13 @@ const Movies = props => {
           </h1>
           <div className={typeStyles.showDetails}>
             <div className={typeStyles.yearContainer}>
-              <span>{props.data.markdownRemark.frontmatter.year}</span>
+              <span className={typeStyles.year}>
+                Year: {props.data.markdownRemark.frontmatter.year}
+              </span>
             </div>
+            <p className={typeStyles.seasons}>
+              Seasons: {props.data.markdownRemark.frontmatter.seasons}
+            </p>
           </div>
           <div className={typeStyles.imageContainer}>
             <Img

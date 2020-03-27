@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import typesStyles from "./types.module.scss"
 import Img from "gatsby-image"
 
@@ -25,6 +25,9 @@ const TvShows = () => {
                 }
               }
             }
+            fields {
+              slug
+            }
           }
         }
       }
@@ -38,7 +41,9 @@ const TvShows = () => {
           {data.allMarkdownRemark.edges.map(edges => (
             <div className={typesStyles.typeBox}>
               <h1 className={typesStyles.title}>
-                {edges.node.frontmatter.title}
+                <Link to={`works/tvshows/${edges.node.fields.slug}`}>
+                  {edges.node.frontmatter.title}
+                </Link>
               </h1>
               <div className={typesStyles.showDetails}>
                 <div className={typesStyles.yearType}>

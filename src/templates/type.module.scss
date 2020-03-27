@@ -6,7 +6,8 @@
   }
 
   .title,
-  .show-details {
+  .year-container,
+  .seasons {
     background-color: rgba(90, 180, 170, 0.1);
     border-radius: 5px;
     text-align: center;
@@ -33,6 +34,13 @@
       .show-details {
         font-size: 1.6rem;
         margin-bottom: 15px;
+        .year-container {
+          margin-bottom: 15px;
+          padding: 10px;
+        }
+        .seasons {
+          padding: 10px;
+        }
       }
       .image-container {
         max-width: 100%;
@@ -63,6 +71,13 @@
       .show-details {
         font-size: 1.8rem;
         margin-bottom: 18px;
+        .year-container {
+          margin-bottom: 18px;
+          padding: 13px;
+        }
+        .seasons {
+          padding: 13px;
+        }
       }
       .image-container {
         width: 100%;
@@ -95,6 +110,13 @@
       .show-details {
         font-size: 1.7rem;
         margin-bottom: 21px;
+        .year-container {
+          margin-bottom: 21px;
+          padding: 16px;
+        }
+        .seasons {
+          padding: 16px;
+        }
       }
       .image-container {
         width: 100%;

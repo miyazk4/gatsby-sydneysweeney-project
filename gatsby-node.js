@@ -54,4 +54,16 @@ module.exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  const tvShowsTemplate = path.resolve("./src/templates/tvshows.tsx")
+
+  res.data.allMarkdownRemark.edges.forEach(edge => {
+    createPage({
+      component: tvShowsTemplate,
+      path: `works/tvshows/${edge.node.fields.slug}`,
+      context: {
+        slug: edge.node.fields.slug,
+      },
+    })
+  })
 }
