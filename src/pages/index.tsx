@@ -1,19 +1,28 @@
 import React from "react"
 import Layout from "../components/layout"
 import BackgroundImage from "gatsby-background-image"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import layoutStyles from "../components/layout.module.scss"
 import homeStyles from "./index.module.scss"
-import data from "./works"
 
-console.log(data)
+const Homepage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      indexImage: file(relativePath: { eq: "images/banner.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
-const Homepage = props => {
   return (
     <Layout>
       <BackgroundImage
+        fluid={data.indexImage.childImageSharp.fluid}
         className={homeStyles.backgroundContainer}
-        fluid={props.data.indexImage.childImageSharp.fluid}
       >
         <div className={homeStyles.blackOverlay}>
           <div className={homeStyles.contentBox}>
@@ -31,14 +40,3 @@ const Homepage = props => {
 }
 
 export default Homepage
-export const pageQuery = graphql`
-  query {
-    indexImage: file(relativePath: { eq: "banner.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
