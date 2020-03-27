@@ -42,4 +42,16 @@ module.exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  const moviesTemplate = path.resolve("./src/templates/movies.tsx")
+
+  res.data.allMarkdownRemark.edges.forEach(edge => {
+    createPage({
+      component: moviesTemplate,
+      path: `works/movies/${edge.node.fields.slug}`,
+      context: {
+        slug: edge.node.fields.slug,
+      },
+    })
+  })
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import worksStyles from "./works.module.scss"
 
@@ -33,6 +33,16 @@ const Works = () => {
     <Layout>
       <div className={worksStyles.wrapper}>
         <h1 className={worksStyles.title}>Works</h1>
+        <p>
+          <Link className={worksStyles.linkTo} to="/works/tvshows">
+            Tv Shows
+          </Link>
+        </p>
+        <p>
+          <Link className={worksStyles.linkTo} to="/works/movies">
+            Movies
+          </Link>
+        </p>
         <div className={worksStyles.workContainer}>
           {data.allMarkdownRemark.nodes.map(nodes => (
             <div className={worksStyles.worksBox}>

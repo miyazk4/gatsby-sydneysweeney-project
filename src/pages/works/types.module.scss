@@ -1,19 +1,11 @@
 .wrapper {
   margin: 0 20px;
 
-  .subtitle,
-  p .linkTo {
+  .title {
     color: rgb(53, 117, 211);
   }
 
-  p .linkTo {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-  }
-
   .title,
-  .subtitle,
   .yearType,
   .seasons {
     background-color: rgba(90, 180, 170, 0.1);
@@ -21,39 +13,29 @@
     text-align: center;
   }
 
-  .work-container {
-    .works-box {
+  .types-container {
+    .type-box {
       border: 3px solid #ddd;
     }
 
-    border-radius: 5px;
-  }
-
-  .information,
-  .image-container {
-    background-color: rgba(140, 150, 190, 0.2);
-    border-radius: 5px;
-    .image {
+    .information,
+    .image-container {
+      background-color: rgba(140, 150, 190, 0.2);
       border-radius: 5px;
+      .image {
+        border-radius: 5px;
+      }
     }
   }
 }
 
 @media (max-width: 600px) {
   .wrapper {
-    .title {
-      font-size: 1.7rem;
-      margin-bottom: 15px;
-      padding: 10px;
-    }
-    p .linkTo {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-    }
-    .work-container {
-      .works-box {
-        .subtitle {
-          font-size: 1.6rem;
+    .types-container {
+      .type-box {
+        margin-bottom: 50px;
+        .title {
+          font-size: 1.5rem;
           margin-bottom: 15px;
           padding: 10px;
         }
@@ -76,7 +58,6 @@
             width: 100%;
           }
         }
-
         .information {
           font-size: 1.4rem;
           margin-bottom: 15px;
@@ -89,19 +70,11 @@
 
 @media (min-width: 601px) and (max-width: 999px) {
   .wrapper {
-    .title {
-      font-size: 1.9rem;
-      margin-bottom: 18px;
-      padding: 13px;
-    }
-    p .linkTo {
-      font-size: 1.6rem;
-      margin-bottom: 18px;
-    }
-    .work-container {
-      .works-box {
-        .subtitle {
-          font-size: 1.8rem;
+    .types-container {
+      .type-box {
+        margin-bottom: 70px;
+        .title {
+          font-size: 1.9rem;
           margin-bottom: 18px;
           padding: 13px;
         }
@@ -125,7 +98,6 @@
             max-width: 350px;
           }
         }
-
         .information {
           font-size: 1.6rem;
           margin-bottom: 18px;
@@ -139,26 +111,19 @@
 @media (min-width: 1000px) {
   .wrapper {
     .title {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 21px;
       padding: 16px;
     }
-    p .linkTo {
-      font-size: 1.7rem;
-      margin-bottom: 21px;
-    }
-    .work-container {
+
+    .types-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
-      .works-box {
+      .type-box {
         margin-right: 15px;
         margin-bottom: 90px;
-        .subtitle {
-          font-size: 1.7rem;
-          margin-bottom: 21px;
-          padding: 16px;
-        }
+
         .show-details {
           font-size: 1.7rem;
           margin-bottom: 21px;
@@ -179,7 +144,6 @@
             max-width: 350px;
           }
         }
-
         .information {
           font-size: 1.5rem;
           margin-bottom: 21px;
