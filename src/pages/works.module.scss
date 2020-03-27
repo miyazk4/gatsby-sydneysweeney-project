@@ -1,0 +1,195 @@
+.wrapper {
+  margin: 0 20px;
+
+  a {
+    text-decoration: none;
+    display: block;
+  }
+  .subtitle a,
+  p .linkTo {
+    color: rgb(53, 117, 211);
+  }
+
+  p .linkTo {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .title,
+  .subtitle,
+  .yearType,
+  .seasons {
+    background-color: rgba(90, 180, 170, 0.1);
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .work-container {
+    .works-box {
+      border: 3px solid #ddd;
+    }
+
+    border-radius: 5px;
+  }
+
+  .information,
+  .image-container {
+    background-color: rgba(140, 150, 190, 0.2);
+    border-radius: 5px;
+    .image {
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    .title {
+      font-size: 1.7rem;
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+    p .linkTo {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    .work-container {
+      .works-box {
+        .subtitle {
+          font-size: 1.6rem;
+          margin-bottom: 15px;
+          padding: 10px;
+        }
+        .show-details {
+          font-size: 1.6rem;
+          margin-bottom: 15px;
+          .yearType {
+            margin-bottom: 15px;
+            padding: 10px;
+          }
+          .seasons {
+            padding: 10px;
+          }
+        }
+        .image-container {
+          max-width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          .image {
+            width: 100%;
+          }
+        }
+
+        .information {
+          font-size: 1.4rem;
+          margin-bottom: 15px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 999px) {
+  .wrapper {
+    .title {
+      font-size: 1.9rem;
+      margin-bottom: 18px;
+      padding: 13px;
+    }
+    p .linkTo {
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+    }
+    .work-container {
+      .works-box {
+        .subtitle {
+          font-size: 1.8rem;
+          margin-bottom: 18px;
+          padding: 13px;
+        }
+        .show-details {
+          font-size: 1.8rem;
+          margin-bottom: 18px;
+          .yearType {
+            margin-bottom: 18px;
+            padding: 13px;
+          }
+          .seasons {
+            padding: 13px;
+          }
+        }
+        .image-container {
+          width: 100%;
+          padding: 13px;
+          margin-bottom: 18px;
+          .image {
+            margin: 0 auto;
+            max-width: 350px;
+          }
+        }
+
+        .information {
+          font-size: 1.6rem;
+          margin-bottom: 18px;
+          padding: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .wrapper {
+    .title {
+      font-size: 3rem;
+      margin-bottom: 21px;
+      padding: 16px;
+    }
+    p .linkTo {
+      font-size: 1.7rem;
+      margin-bottom: 21px;
+    }
+    .work-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .works-box {
+        margin-right: 15px;
+        margin-bottom: 90px;
+        .subtitle {
+          font-size: 1.7rem;
+          margin-bottom: 21px;
+          padding: 16px;
+        }
+        .show-details {
+          font-size: 1.7rem;
+          margin-bottom: 21px;
+          .yearType {
+            margin-bottom: 21px;
+            padding: 16px;
+          }
+          .seasons {
+            padding: 16px;
+          }
+        }
+        .image-container {
+          width: 100%;
+          padding: 16px;
+          margin-bottom: 21px;
+          .image {
+            margin: 0 auto;
+            max-width: 350px;
+          }
+        }
+
+        .information {
+          font-size: 1.5rem;
+          margin-bottom: 21px;
+          padding: 16px;
+        }
+      }
+    }
+  }
+}

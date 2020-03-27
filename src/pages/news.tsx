@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 const NewsPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/news/" } }) {
         edges {
           node {
             frontmatter {
@@ -22,6 +22,8 @@ const NewsPage = () => {
                 }
               }
             }
+
+            html
             fields {
               slug
             }
