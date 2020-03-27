@@ -23,6 +23,9 @@ const Works = () => {
               }
             }
           }
+          fields {
+            slug
+          }
         }
       }
     }
@@ -46,9 +49,20 @@ const Works = () => {
         <div className={worksStyles.workContainer}>
           {data.allMarkdownRemark.nodes.map(nodes => (
             <div className={worksStyles.worksBox}>
-              <h2 className={worksStyles.subtitle}>
-                {nodes.frontmatter.title}
-              </h2>
+              {nodes.frontmatter.type === "Tv Show" ? (
+                <h2 className={worksStyles.subtitle}>
+                  <Link to={`works/tvshows/${nodes.fields.slug}`}>
+                    {nodes.frontmatter.title}
+                  </Link>
+                </h2>
+              ) : (
+                <h2 className={worksStyles.subtitle}>
+                  <Link to={`works/movies/${nodes.fields.slug}`}>
+                    {nodes.frontmatter.title}
+                  </Link>
+                </h2>
+              )}
+
               <div className={worksStyles.showDetails}>
                 <div className={worksStyles.yearType}>
                   <span>{nodes.frontmatter.type} </span>

@@ -1,7 +1,11 @@
 .wrapper {
   margin: 0 20px;
 
-  .subtitle,
+  a {
+    text-decoration: none;
+    display: block;
+  }
+  .subtitle a,
   p .linkTo {
     color: rgb(53, 117, 211);
   }
