@@ -30,7 +30,6 @@ const Works = () => {
       }
     }
   `)
-  console.log(data)
 
   return (
     <Layout>

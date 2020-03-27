@@ -19,6 +19,7 @@
         .secondary-nav-item-ul {
           display: none;
           position: absolute;
+          z-index: 1;
           top: 63px;
           .nav-item {
             display: block;
@@ -51,6 +52,7 @@
 
     .navigation-container.navigation-modal-open {
       position: fixed;
+      z-index: 1;
       left: 45%;
       top: 64px;
       right: 0;
