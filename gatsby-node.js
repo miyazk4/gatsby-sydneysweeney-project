@@ -11,6 +11,12 @@ module.exports.onCreateNode = ({ node, actions }) => {
       name: "slug",
       value: slug,
     })
+
+    createNodeField({
+      node,
+      name: "type",
+      value: path.basename(path.dirname(node.fileAbsolutePath)),
+    })
   }
 }
 
@@ -19,9 +25,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const newsTemplate = path.resolve("./src/templates/news.tsx")
 
-  const res = await graphql(`
+  const resNews = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/news/" } }) {
         edges {
           node {
             fields {
@@ -33,7 +39,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  res.data.allMarkdownRemark.edges.forEach(edge => {
+  resNews.data.allMarkdownRemark.edges.forEach(edge => {
     createPage({
       component: newsTemplate,
       path: `/news/${edge.node.fields.slug}`,
@@ -45,7 +51,26 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const moviesTemplate = path.resolve("./src/templates/movies.tsx")
 
-  res.data.allMarkdownRemark.edges.forEach(edge => {
+  const resMovies = await graphql(`
+    query {
+      allMarkdownRemark(
+        filter: {
+          frontmatter: { type: { in: "Movie" } }
+          fileAbsolutePath: { regex: "/works/" }
+        }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  resMovies.data.allMarkdownRemark.edges.forEach(edge => {
     createPage({
       component: moviesTemplate,
       path: `works/movies/${edge.node.fields.slug}`,
@@ -55,9 +80,28 @@ module.exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  const resTvShows = await graphql(`
+    query {
+      allMarkdownRemark(
+        filter: {
+          frontmatter: { type: { in: "Tv Show" } }
+          fileAbsolutePath: { regex: "/works/" }
+        }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
   const tvShowsTemplate = path.resolve("./src/templates/tvshows.tsx")
 
-  res.data.allMarkdownRemark.edges.forEach(edge => {
+  resTvShows.data.allMarkdownRemark.edges.forEach(edge => {
     createPage({
       component: tvShowsTemplate,
       path: `works/tvshows/${edge.node.fields.slug}`,

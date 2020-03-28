@@ -82,29 +82,33 @@
 
 @media (min-width: 1000px) {
   .wrapper {
-    .title {
-      font-size: 1.9rem;
-      margin-bottom: 21px;
-      padding: 16px;
-    }
-    .date {
-      font-size: 1.7rem;
-      margin-bottom: 21px;
-      padding: 16px;
-    }
-
-    .image-container {
-      padding: 16px;
-      margin-bottom: 21px;
-      .image {
-        margin: 0 auto;
-        max-width: 50%;
+    .new-container {
+      margin: 0 auto;
+      max-width: 70%;
+      .title {
+        font-size: 1.9rem;
+        margin-bottom: 21px;
+        padding: 16px;
       }
-    }
-    .content {
-      font-size: 1.5rem;
-      padding: 16px;
-      margin-bottom: 50px;
+      .date {
+        font-size: 1.7rem;
+        margin-bottom: 21px;
+        padding: 16px;
+      }
+
+      .image-container {
+        padding: 16px;
+        margin-bottom: 21px;
+        .image {
+          margin: 0 auto;
+          max-width: 50%;
+        }
+      }
+      .content {
+        font-size: 1.5rem;
+        padding: 16px;
+        margin-bottom: 50px;
+      }
     }
   }
 }

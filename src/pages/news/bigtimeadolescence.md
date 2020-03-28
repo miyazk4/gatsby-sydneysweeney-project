@@ -5,6 +5,7 @@ briefDescription: "Sydney Sweeney gives a sensitive and subtil performance on he
 featuredImage: "../../images/big-time.jpg"
 ---
 
-Big Time Adolescence, directed by Jason Orley, presents a new type of coming of age movies. It's a realistic and empathetic narrative about the meaning of becoming an adult and leaving things behind.
+Sydney Sweeney has been casted alongside Griffin Luck to this new type of coming of age movies.
+Sydney has been casted to play Zeke's (Pete Davidson) girlfriend.
 
-Unlike other movies of the same genre, like The Perks of Being a Wallflower, this one stands out a lot more between the relationship of the two main protagonists.
+Directed by Jason Orley, with it's initial release date to be on January 28, 2019.

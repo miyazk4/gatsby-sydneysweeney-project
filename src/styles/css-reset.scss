@@ -36,6 +36,15 @@ body {
   line-height: 1.5;
 }
 
+h1,
+h2,
+a {
+  font-family: Roboto;
+}
+p {
+  font-family: Roboto;
+}
+
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {

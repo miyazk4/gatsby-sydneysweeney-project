@@ -7,7 +7,7 @@ import Head from "../components/head"
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(fields: { type: { eq: "works" }, slug: { eq: $slug } }) {
       frontmatter {
         title
         year
