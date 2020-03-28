@@ -2,8 +2,9 @@ import React from "react"
 import Layout from "../components/layout"
 import BackgroundImage from "gatsby-background-image"
 import { graphql, useStaticQuery } from "gatsby"
-import layoutStyles from "../components/layout.module.scss"
+
 import homeStyles from "./index.module.scss"
+import Head from "../components/head"
 
 const Homepage = () => {
   const data = useStaticQuery(graphql`
@@ -20,6 +21,7 @@ const Homepage = () => {
 
   return (
     <Layout>
+      <Head title="Home" />
       <BackgroundImage
         fluid={data.indexImage.childImageSharp.fluid}
         className={homeStyles.backgroundContainer}

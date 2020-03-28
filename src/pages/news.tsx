@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import newsStyles from "./news.module.scss"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
+import Head from "../components/head"
 
 const NewsPage = () => {
   const data = useStaticQuery(graphql`
@@ -35,6 +36,7 @@ const NewsPage = () => {
 
   return (
     <Layout>
+      <Head title="News" />
       <div className={newsStyles.wrapper}>
         <h1 className={newsStyles.title}>News</h1>
         <div className={newsStyles.newsContainer}>

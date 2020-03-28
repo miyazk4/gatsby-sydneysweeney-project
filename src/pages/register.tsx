@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
 import registerStyles from "./register.module.scss"
 import cn from "classnames"
+import Head from "../components/head"
 
 interface FormInputs {
   email?: string
@@ -68,6 +69,7 @@ const Register = () => {
 
   return (
     <Layout>
+      <Head title="Register" />
       <div className={registerStyles.wrapper}>
         <h1 className={registerStyles.title}>Register</h1>
         <p className={registerStyles.information}>

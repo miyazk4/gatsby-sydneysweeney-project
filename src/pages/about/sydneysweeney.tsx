@@ -2,10 +2,12 @@ import React from "react"
 import Layout from "../../components/layout"
 import aboutSydneyStyles from "./sydneysweeney.module.scss"
 import SydneyImage from "../../images/aboutpicture.jpg"
+import Head from "../../components/head"
 
 const AboutSydney = () => {
   return (
     <Layout>
+      <Head title="About" />
       <main>
         <div className={aboutSydneyStyles.gridContainer}>
           <div className={aboutSydneyStyles.leftGrid}>

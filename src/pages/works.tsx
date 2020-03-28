@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import worksStyles from "./works.module.scss"
+import Head from "../components/head"
 
 const Works = () => {
   const data = useStaticQuery(graphql`
@@ -33,6 +34,7 @@ const Works = () => {
 
   return (
     <Layout>
+      <Head title="Works" />
       <div className={worksStyles.wrapper}>
         <h1 className={worksStyles.title}>Works</h1>
         <p>
