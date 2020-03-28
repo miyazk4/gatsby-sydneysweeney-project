@@ -1,9 +1,23 @@
 main {
   margin: 50px 20px 0 20px;
+
+  .bold {
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(53, 117, 211);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .title,
   .subtitle {
     background-color: rgba(90, 180, 170, 0.1);
     border-radius: 5px;
+    color: rgb(53, 117, 211);
   }
   .information {
     background-color: rgba(140, 150, 190, 0.2);
