@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import galleryTypes from "./gallery.module.scss"
+import Head from "../components/head"
 
 const Gallery = () => {
   const data = useStaticQuery(graphql`
@@ -28,6 +29,7 @@ const Gallery = () => {
   `)
   return (
     <Layout>
+      <Head title="Gallery" />
       <div className={galleryTypes.wrapper}>
         <h1 className={galleryTypes.title}>Gallery</h1>
         <div className={galleryTypes.imageWrapper}>

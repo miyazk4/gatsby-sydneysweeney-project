@@ -3,6 +3,7 @@ import Layout from "../../components/layout"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import typesStyles from "./types.module.scss"
 import Img from "gatsby-image"
+import Head from "../../components/head"
 
 const TvShows = () => {
   const data = useStaticQuery(graphql`
@@ -36,6 +37,7 @@ const TvShows = () => {
 
   return (
     <Layout>
+      <Head title="Tv Shows" />
       <div className={typesStyles.wrapper}>
         <div className={typesStyles.typesContainer}>
           {data.allMarkdownRemark.edges.map(edges => (

@@ -18,13 +18,9 @@
         }
         .secondary-nav-item-ul {
           display: none;
-          position: absolute;
-          z-index: 1;
-          top: 63px;
+
           .nav-item {
             display: block;
-            background: linear-gradient(to left, #536976, #292e49);
-            border-bottom: 2px solid #536976;
           }
         }
         &:hover {
@@ -72,6 +68,7 @@
 
         .secondary-nav-list-container {
           .secondary-nav-item-ul {
+            display: block;
             list-style-type: none;
             margin-left: 25px;
           }
@@ -93,6 +90,15 @@
           padding: 7px;
           margin-right: 5px;
         }
+        .secondary-nav-item-ul {
+          position: fixed;
+          z-index: 1;
+          top: 56px;
+          .nav-item {
+            background: linear-gradient(to left, #536976, #292e49);
+            border-bottom: 2px solid #536976;
+          }
+        }
       }
     }
   }
@@ -109,6 +115,15 @@
         font-size: 1.5rem;
         padding: 12px;
         margin-right: 8px;
+      }
+      .secondary-nav-item-ul {
+        position: fixed;
+        z-index: 1;
+        top: 56px;
+        .nav-item {
+          background: linear-gradient(to left, #536976, #292e49);
+          border-bottom: 2px solid #536976;
+        }
       }
     }
   }

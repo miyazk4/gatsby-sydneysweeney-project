@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import newStyles from "./new.module.scss"
+import Head from "../components/head"
 
 export const query = graphql`
   query($slug: String!) {
@@ -26,6 +27,7 @@ export const query = graphql`
 const News = props => {
   return (
     <Layout>
+      <Head title={props.data.markdownRemark.frontmatter.title} />
       <div className={newStyles.wrapper}>
         <div className={newStyles.newContainer}>
           <h1 className={newStyles.title}>

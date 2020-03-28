@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import typeStyles from "./type.module.scss"
+import Head from "../components/head"
 
 export const query = graphql`
   query($slug: String!) {
@@ -26,6 +27,7 @@ export const query = graphql`
 const Movies = props => {
   return (
     <Layout>
+      <Head title={props.data.markdownRemark.frontmatter.title} />
       <div className={typeStyles.wrapper}>
         <div className={typeStyles.typeContainer}>
           <h1 className={typeStyles.title}>

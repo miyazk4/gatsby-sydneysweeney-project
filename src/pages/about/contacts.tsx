@@ -1,10 +1,12 @@
 import React from "react"
 import Layout from "../../components/layout"
 import contactStyles from "./contact.module.scss"
+import Head from "../../components/head"
 
 const Contacts = () => {
   return (
     <Layout>
+      <Head title="Contacts" />
       <div className={contactStyles.wrapper}>
         <div className={contactStyles.contactContainer}>
           <h1 className={contactStyles.title}>Booking</h1>

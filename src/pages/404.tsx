@@ -2,10 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import e404Styles from "./404.module.scss"
+import Head from "../components/head"
 
 const E404 = () => {
   return (
     <Layout>
+      <Head title="404" />
       <div className={e404Styles.wrapper}>
         <div className={e404Styles.container}>
           <h1 className={e404Styles.title}>Page not found</h1>
