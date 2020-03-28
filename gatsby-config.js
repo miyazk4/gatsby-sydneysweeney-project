@@ -1,4 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    title: `Sydney Sweeney`,
+    siteUrl: `https://www.gatsbyjs.org`,
+    description: `Blazing fast modern site generator for React`,
+  },
   plugins: [
     "gatsby-plugin-typescript",
     "gatsby-plugin-sass",
@@ -19,11 +24,5 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-  ],
-}
-
-module.exports = {
-  siteMetaData: {
-    title: "Sydney Sweeney",
-  },
+  ]
 }
